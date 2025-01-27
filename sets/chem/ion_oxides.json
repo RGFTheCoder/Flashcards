@@ -1,7 +1,112 @@
 [
   {
+    "q": "Acetate",
+    "a": "C2H3O2 (-)",
+    "r": true
+  },
+  {
+    "q": "Chlorate",
+    "a": "ClO3 (-)",
+    "r": true
+  },
+  {
+    "q": "Chlorite",
+    "a": "ClO2 (-)",
+    "r": true
+  },
+  {
+    "q": "Hypochlorite",
+    "a": "ClO (-)",
+    "r": true
+  },
+  {
+    "q": "Cyanide",
+    "a": "CN (-)",
+    "r": true
+  },
+  {
+    "q": "Hydroxide",
+    "a": "OH (-)",
+    "r": true
+  },
+  {
+    "q": "Nitrate",
+    "a": "NO3 (-)",
+    "r": true
+  },
+  {
+    "q": "Nitrite",
+    "a": "NO2 (-)",
+    "r": true
+  },
+  {
+    "q": "Permanganate",
+    "a": "MnO4 (-)",
+    "r": true
+  },
+  {
+    "q": "Thiocyanate",
+    "a": "SCN (-)",
+    "r": true
+  },
+  {
+    "q": "Iodate",
+    "a": "IO3 (-)",
+    "r": true
+  },
+  {
+    "q": "Bromate",
+    "a": "BrO3 (-)",
+    "r": true
+  },
+  {
+    "q": "Ammonium",
+    "a": "NH4 (+)",
+    "r": true
+  },
+  {
+    "q": "Hydronium",
+    "a": "H3O (+)",
+    "r": true
+  },
+  {
+    "q": "Carbonate",
+    "a": "CO3 (2-)",
+    "r": true
+  },
+  {
+    "q": "Chromate",
+    "a": "CrO4 (2-)",
+    "r": true
+  },
+  {
+    "q": "Dichromate",
+    "a": "Cr2O7 (2-)",
+    "r": true
+  },
+  {
+    "q": "Oxalate",
+    "a": "C2O4 (2-)",
+    "r": true
+  },
+  {
     "q": "Sulfate",
-    "a": "SOS",
+    "a": "SO4 (2-)",
+    "r": true
+  },
+  {
+    "q": "Sulfite",
+    "a": "SO3 (2-)",
+    "r": true
+  },
+  {
+    "q": "Phosphate",
+    "a": "PO4 (3-)",
+    "r": true
+  },
+  {
+    "q": "Phosphite",
+    "a": "PO3 (3-)",
     "r": true
   }
 ]

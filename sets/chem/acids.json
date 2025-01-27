@@ -1,0 +1,47 @@
+[
+  {
+    "q": "Hydrochloric Acid",
+    "a": "HCl",
+    "r": true
+  },
+  {
+    "q": "Hydroiodic Acid",
+    "a": "HI",
+    "r": true
+  },
+  {
+    "q": "Hydrobromic Acid",
+    "a": "HBr",
+    "r": true
+  },
+  {
+    "q": "Chloric Acid",
+    "a": "HClO3",
+    "r": true
+  },
+  {
+    "q": "Perchloric Acid",
+    "a": "HClO4",
+    "r": true
+  },
+  {
+    "q": "Nitric Acid",
+    "a": "HNO3",
+    "r": true
+  },
+  {
+    "q": "Sulfuric Acid",
+    "a": "H2SO4",
+    "r": true
+  },
+  {
+    "q": "Acetic Acid",
+    "a": "HC2H3O2",
+    "r": true
+  },
+  {
+    "q": "Phosphoric Acid",
+    "a": "H3PO4",
+    "r": true
+  }
+]

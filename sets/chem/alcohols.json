@@ -1,0 +1,22 @@
+[
+  {
+    "q": "Methanol",
+    "a": "CH3OH",
+    "r": true
+  },
+  {
+    "q": "Ethanol",
+    "a": "C2H5OH",
+    "r": true
+  },
+  {
+    "q": "Propanol",
+    "a": "C3H7OH",
+    "r": true
+  },
+  {
+    "q": "Butanol",
+    "a": "C4H9OH",
+    "r": true
+  }
+]

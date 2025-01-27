@@ -1,7 +1,7 @@
-import { walk, exists } from "@std/fs";
+import { exists, walk } from "@std/fs";
 import { levenshteinDistance, wordSimilaritySort } from "@std/text";
 
-function sleep(s) {
+function sleep(s: number) {
   const { promise, resolve } = Promise.withResolvers();
 
   setTimeout(resolve, s * 1000);
@@ -49,6 +49,8 @@ async function main() {
       encoder.encode(
         JSON.stringify({
           known: {},
+          iteration: 0,
+          answeredInIteration: [],
         }),
       ),
     );
@@ -56,7 +58,14 @@ async function main() {
 
   const user_data = JSON.parse(
     decoder.decode(await Deno.readFile("./user.json")),
-  ) as { known: { [id: string]: number } };
+  ) as {
+    known: { [id: string]: number };
+    iteration: number;
+    answeredInIteration: string[];
+  };
+
+  user_data.iteration = user_data.iteration ?? 0;
+  user_data.answeredInIteration = user_data.answeredInIteration ?? [];
 
   const sets = new Set<string>();
 
@@ -64,8 +73,8 @@ async function main() {
     const type = walkEntry.isSymlink
       ? "symlink"
       : walkEntry.isFile
-        ? "file"
-        : "directory";
+      ? "file"
+      : "directory";
 
     if (type == "file") sets.add(walkEntry.path);
   }
@@ -83,7 +92,7 @@ async function main() {
       .join(" ")
       .split("/")
       .map((y) => y[0].toUpperCase() + y.substring(1))
-      .join("/"),
+      .join("/")
   );
 
   console.clear();
@@ -100,13 +109,15 @@ async function main() {
 
   const data = (
     await Promise.all(
-      matched_sets.map(async (set, i) => {
+      matched_sets.map(async (set) => {
         const path = `./sets/${set}.json`;
-        const contents = JSON.parse(decoder.decode(await Deno.readFile(path)));
+        const contents = JSON.parse(
+          decoder.decode(await Deno.readFile(path)),
+        ) as { id: string; q: string; a: string; r: boolean }[];
 
         contents.forEach(
-          (x: { id: string; q: string; a: string; r: boolean }) => {
-            x.id = `${set}/${contents.id ?? `Q${i}`}`;
+          (x, i) => {
+            x.id = `${set}/${contents[i].id ?? `Q${i}`}`;
           },
         );
 
@@ -153,24 +164,43 @@ async function main() {
     );
   }
 
-  let iteration = 0;
+  const answeredInIteration = user_data.answeredInIteration;
 
   while (true) {
-    const relevant_questions = shuffle_array(
-      Object.values(questions).filter((x) => iteration % 2 ** x.rank == 0),
+    const relevant_questions_all = shuffle_array(
+      Object.values(questions).filter((x) =>
+        user_data.iteration % 2 ** x.rank == 0
+      ),
+    );
+    const relevant_questions = relevant_questions_all.filter((x) =>
+      !answeredInIteration.includes(x.id)
     );
 
+    let questions_answered = relevant_questions_all.length -
+      relevant_questions.length;
+
     for (const question of relevant_questions) {
-      const correct =
-        question.rank > 2
-          ? free_resp(question.question, question.answer)
-          : multiple_choice(question.question, question.answer, all_answers, 4);
+      console.clear();
+
+      console.log(
+        `Progress ${
+          (100 * questions_answered / relevant_questions_all.length).toFixed(1)
+        }%`,
+      );
+
+      const correct = question.rank == 0
+        ? multiple_choice(question.question, question.answer, all_answers, 4)
+        : question.rank == 1
+        ? multiple_choice(question.question, question.answer, all_answers, 8)
+        : free_resp(question.question, question.answer);
 
       if (correct == "EXIT") {
         await save_data();
 
         return;
       }
+
+      answeredInIteration.push(question.id);
 
       question.rank += correct == "CORRECT" ? 1 : -1;
       if (question.rank < 0) question.rank = 0;
@@ -181,11 +211,19 @@ async function main() {
       } else {
         console.log("%cIncorrect", "color: red;");
       }
+      questions_answered++;
 
       await sleep(0.4);
     }
 
-    iteration++;
+    answeredInIteration.length = 0;
+    user_data.iteration++;
+
+    const exit = prompt("This iteration is complete. Exit? (Y/N)");
+    if ((exit || "n")[0].toLowerCase() == "y") {
+      await save_data();
+      return;
+    }
   }
 }
 
@@ -200,7 +238,6 @@ function multiple_choice(
   all_answers: string[],
   count: number = 4,
 ): Q_RESP {
-  console.clear();
   const relevant_options = wordSimilaritySort(answer, all_answers);
 
   const options = shuffle_array(relevant_options.slice(0, count));
@@ -221,7 +258,6 @@ function multiple_choice(
  * Free-Response Handler
  */
 function free_resp(question: string, answer: string): Q_RESP {
-  console.clear();
   console.log(question);
   console.log();
 
@@ -235,7 +271,7 @@ function free_resp(question: string, answer: string): Q_RESP {
     if (dist < 3) {
       const is_correct = prompt(`Is your answer ${answer}? `);
 
-      return (is_correct || "n")[0].toLowerCase() == "n" ? "CORRECT" : "WRONG";
+      return (is_correct || "n")[0].toLowerCase() == "n" ? "WRONG" : "CORRECT";
     } else {
       return "WRONG";
     }

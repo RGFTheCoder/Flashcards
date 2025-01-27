@@ -1,0 +1,37 @@
+[
+  {
+    "q": "Methane",
+    "a": "CH4",
+    "r": true
+  },
+  {
+    "q": "Ethane",
+    "a": "C2H6",
+    "r": true
+  },
+  {
+    "q": "Propane",
+    "a": "C3H8",
+    "r": true
+  },
+  {
+    "q": "Butane",
+    "a": "C4H10",
+    "r": true
+  },
+  {
+    "q": "Ethene",
+    "a": "C2H4",
+    "r": true
+  },
+  {
+    "q": "Propene",
+    "a": "C3H6",
+    "r": true
+  },
+  {
+    "q": "Butene",
+    "a": "C4H8",
+    "r": true
+  }
+]
