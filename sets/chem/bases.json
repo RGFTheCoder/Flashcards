@@ -1,0 +1,82 @@
+[
+  {
+    "q": "Sodium Hydroxide",
+    "a": "NaOH (Strong)",
+    "r": true
+  },
+  {
+    "q": "Potassium Hydroxide",
+    "a": "KOH (Strong)",
+    "r": true
+  },
+  {
+    "q": "Lithium Hydroxide",
+    "a": "LiOH (Strong)",
+    "r": true
+  },
+  {
+    "q": "Calcium Hydroxide",
+    "a": "Ca(OH)2 (Strong)",
+    "r": true
+  },
+  {
+    "q": "Barium Hydroxide",
+    "a": "Ba(OH)2 (Strong)",
+    "r": true
+  },
+  {
+    "q": "Magnesium Hydroxide",
+    "a": "Mg(OH)2 (Weak)",
+    "r": true
+  },
+  {
+    "q": "Ammonia",
+    "a": "NH3 (Weak)",
+    "r": true
+  },
+  {
+    "q": "Ammonium Hydroxide",
+    "a": "NH4OH (Weak)",
+    "r": true
+  },
+  {
+    "q": "Aluminum Hydroxide",
+    "a": "Al(OH)3 (Weak)",
+    "r": true
+  },
+  {
+    "q": "Zinc Hydroxide",
+    "a": "Zn(OH)2 (Weak)",
+    "r": true
+  },
+  {
+    "q": "Iron(II) Hydroxide",
+    "a": "Fe(OH)2 (Weak)",
+    "r": true
+  },
+  {
+    "q": "Iron(III) Hydroxide",
+    "a": "Fe(OH)3 (Weak)",
+    "r": true
+  },
+  {
+    "q": "Copper(II) Hydroxide",
+    "a": "Cu(OH)2 (Weak)",
+    "r": true
+  },
+  {
+    "q": "Pyridine",
+    "a": "C5H5N (Weak)",
+    "r": true
+  },
+  {
+    "q": "Methylamine",
+    "a": "CH3NH2 (Weak)",
+    "r": true
+  },
+  {
+    "q": "Ethylamine",
+    "a": "C2H5NH2 (Weak)",
+    "r": true
+  }
+]
