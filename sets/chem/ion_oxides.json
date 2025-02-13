@@ -108,5 +108,40 @@
     "q": "Phosphite",
     "a": "PO3 (3-)",
     "r": true
+  },
+  {
+    "q": "Peroxide",
+    "a": "O2 (2-)",
+    "r": true
+  },
+  {
+    "q": "Azide",
+    "a": "N3 (-)",
+    "r": true
+  },
+  {
+    "q": "Bicarbonate",
+    "a": "HCO3 (-)",
+    "r": true
+  },
+  {
+    "q": "Hydrogen Sulfate",
+    "a": "HSO4 (-)",
+    "r": true
+  },
+  {
+    "q": "Hydrogen Sulfite",
+    "a": "HSO3 (-)",
+    "r": true
+  },
+  {
+    "q": "Hydrogen Phosphate",
+    "a": "HPO4 (2-)",
+    "r": true
+  },
+  {
+    "q": "Dihydrogen Phosphate",
+    "a": "H2PO4 (-)",
+    "r": true
   }
 ]
