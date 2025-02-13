@@ -3,6 +3,7 @@
 ## Sets
 
 - [ ]: Make set for weak vs strong acids
+- [ ]: Acetate (and ig other base parts of weak acids)
 
 ## Program
 
