@@ -1,0 +1,82 @@
+[
+  {
+    "q": "Aluminum",
+    "a": "Al (3+)",
+    "r": false
+  },
+  {
+    "q": "Oxygen",
+    "a": "O (2-)",
+    "r": false
+  },
+  {
+    "q": "Silver",
+    "a": "Ag (+)",
+    "r": false
+  },
+  {
+    "q": "Zinc",
+    "a": "Zn (2+)",
+    "r": false
+  },
+  {
+    "q": "Magnesium",
+    "a": "Mg (2+)",
+    "r": false
+  },
+  {
+    "q": "Calcium",
+    "a": "Ca (2+)",
+    "r": false
+  },
+  {
+    "q": "Sodium",
+    "a": "Na (+)",
+    "r": false
+  },
+  {
+    "q": "Potassium",
+    "a": "K (+)",
+    "r": false
+  },
+  {
+    "q": "Lithium",
+    "a": "Li (+)",
+    "r": false
+  },
+  {
+    "q": "Barium",
+    "a": "Ba (2+)",
+    "r": false
+  },
+  {
+    "q": "Strontium",
+    "a": "Sr (2+)",
+    "r": false
+  },
+  {
+    "q": "Fluorine",
+    "a": "F (-)",
+    "r": false
+  },
+  {
+    "q": "Chlorine",
+    "a": "Cl (-)",
+    "r": false
+  },
+  {
+    "q": "Bromine",
+    "a": "Br (-)",
+    "r": false
+  },
+  {
+    "q": "Iodine",
+    "a": "I (-)",
+    "r": false
+  },
+  {
+    "q": "Hydrogen",
+    "a": "H (+)",
+    "r": false
+  }
+]
