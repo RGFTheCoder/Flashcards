@@ -1,47 +1,72 @@
 [
   {
     "q": "Hydrochloric Acid",
-    "a": "HCl",
+    "a": "HCl (Strong)",
     "r": true
   },
   {
     "q": "Hydroiodic Acid",
-    "a": "HI",
+    "a": "HI (Strong)",
     "r": true
   },
   {
     "q": "Hydrobromic Acid",
-    "a": "HBr",
+    "a": "HBr (Strong)",
     "r": true
   },
   {
     "q": "Chloric Acid",
-    "a": "HClO3",
+    "a": "HClO3 (Strong)",
     "r": true
   },
   {
     "q": "Perchloric Acid",
-    "a": "HClO4",
+    "a": "HClO4 (Strong)",
     "r": true
   },
   {
     "q": "Nitric Acid",
-    "a": "HNO3",
+    "a": "HNO3 (Strong)",
     "r": true
   },
   {
     "q": "Sulfuric Acid",
-    "a": "H2SO4",
+    "a": "H2SO4 (Strong*)",
     "r": true
   },
   {
     "q": "Acetic Acid",
-    "a": "HC2H3O2",
+    "a": "HC2H3O2 (Weak)",
     "r": true
   },
   {
     "q": "Phosphoric Acid",
-    "a": "H3PO4",
+    "a": "H3PO4 (Weak)",
+    "r": true
+  },
+  {
+    "q": "Nitrous Acid",
+    "a": "HNO2 (Weak)",
+    "r": true
+  },
+  {
+    "q": "Hydrosulfuric Acid",
+    "a": "H2S (Weak)",
+    "r": true
+  },
+  {
+    "q": "Hydrogen Sulfate Ion",
+    "a": "HSO4– (Weak)",
+    "r": true
+  },
+  {
+    "q": "Hydrocyanic Acid",
+    "a": "HCN (Weak)",
+    "r": true
+  },
+  {
+    "q": "Hydrofluoric Acid",
+    "a": "HF (Weak)",
     "r": true
   }
 ]
